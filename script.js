@@ -17,6 +17,12 @@ function generatePassword() {
   var specialChar = confirm("Would you like to use special characters?");
   var length = prompt("Please enter a password length between 8-120 characters.")
 
+  
+  if (isNaN(length) === true) {
+    alert("Please enter a number.")
+} else if (length < 8 || lenghth > 120) {
+    alert("Please choose a number between 8 and 120")
+}
 }
 
 
