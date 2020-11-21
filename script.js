@@ -10,5 +10,16 @@ function writePassword() {
 
 }
 
+function generatePassword() {
+  var lowercase = confirm("Would you like to use lowercase letters?");
+  var uppercase = confirm("would you like to use uppercase letters?");
+  var numbers = confirm("Would you like to use numbers?");
+  var specialChar = confirm("Would you like to use special characters?");
+  var length = prompt("Please enter a password length between 8-120 characters.")
+
+}
+
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
