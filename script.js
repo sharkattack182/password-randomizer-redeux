@@ -13,11 +13,13 @@ function writePassword() {
 function generatePassword() {
 // prompts to determine the users password criteria
 
-  var lowercase = confirm("Would you like to use lowercase letters?");
-  var uppercase = confirm("would you like to use uppercase letters?");
-  var numbers = confirm("Would you like to use numbers?");
-  var specialChar = confirm("Would you like to use special characters?");
-  var length = prompt("Please enter a password length between 8-120 characters.")
+  var length = prompt("Please enter a password length between 8-120 characters.");
+
+// declared a variable to concatinate all the arrays from users criteria
+  var selectedArrays =[];
+
+// declared a variable for the newly genterated password
+  var newPassword = "";
 
 // arrays...
 
@@ -32,16 +34,36 @@ var specialCharArr = ["+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "
     alert("Please enter a number.")
 } else if (length < 8 || length > 120) {
     alert("Please choose a number between 8 and 120")
+} else {
+
+// if an appropriate length is selected it prompts the user for password criteria
+
+//lowercase
+  if (confirm("Would you like to include lowercase letters in your password?")) {
+    selectedArrays.push(lowercaseArr);
+}
+
+//uppercase   
+  if (confirm("Would you like to include uppercase letters in your password?")) {
+    selectedArrays.push(uppercaseArr);
+}
+
+// numbers 
+  if (confirm("Would you like to include numbers in your password?")) {
+    selectedArrays.push(numbersArr);
+}
+
+// special characters
+  if (confirm("Would you like to include special characters in your password?")) {
+    selectedArrays.push(specialCharArr);
 }
 
 
-// checks to make sure atleast one character is selected
-
-if (lowercase === false && uppercase === false && numbers === false && specialChar === false) {
-    alert("you must select atleast one type of character for your password")
+console.log(selectedArrays);
 }
 
-// leaving off point..
+
+// // leaving off point..
 // to do:
 // figure out all what options were confirmed and concat them into a new array 
 // generate a random number between 0 and the length of the array -1
