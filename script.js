@@ -40,6 +40,13 @@ var specialCharArr = ["+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "
 if (lowercase === false && uppercase === false && numbers === false && specialChar === false) {
     alert("you must select atleast one type of character for your password")
 }
+
+// leaving off point..
+// to do:
+// figure out all what options were confirmed and concat them into a new array 
+// generate a random number between 0 and the length of the array -1
+// associate that random number with an index in the array
+// create a password variable and join the new array together as a string and return the string
 }
 
 
