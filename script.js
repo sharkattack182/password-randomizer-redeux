@@ -60,15 +60,15 @@ var specialCharArr = ["+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "
 
 
 console.log(selectedArrays);
+
+for (var i = 0; i < length; i++) {
+    var characterType = Math.floor(Math.random() * selectedArrays.length);
+    var character = Math.floor(Math.random() * selectedArrays[characterType].length);
+    var randomPick = selectedArrays[characterType][character];
+    newPassword += randomPick;
+  }
+  return newPassword
 }
-
-
-// // leaving off point..
-// to do:
-// figure out all what options were confirmed and concat them into a new array 
-// generate a random number between 0 and the length of the array -1
-// associate that random number with an index in the array
-// create a password variable and join the new array together as a string and return the string
 }
 
 
